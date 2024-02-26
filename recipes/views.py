@@ -83,3 +83,7 @@ def delete_recipe(request, recipe_id):
     else:
         messages.error(request, 'У вас нет разрешения на удаление этого рецепта')
         return redirect('recipe_detail', recipe_id=recipe.id)
+
+def all_recipes(request):
+    recipes = Recipe.objects.all()
+    return render(request, 'recipes/all_recipes.html', {'recipes': recipes})

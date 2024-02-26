@@ -10,6 +10,7 @@
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'all_recipes' %}">Все рецепты</a></li>
                 <li><a href="{% url 'add_recipe' %}">Добавить рецепт</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}">Выйти</a></li>
